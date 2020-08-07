@@ -27,3 +27,16 @@ INSERT INTO libraryapp_book
     (title, isbn_number, year_published, location_id, author, librarian_id)
 VALUES
     ('The Iliad', '1853262420', 1260, 1, 'Homer', 4);
+
+SELECT
+    li.id library_id,
+    li.title,
+    li.address,
+    b.id book_id,
+    b.title,
+    b.author,
+    b.year_published,
+    b.isbn_number
+FROM libraryapp_library li
+    JOIN libraryapp_book b ON li.id = b.location_id
+;
