@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from libraryapp.models import Book
 from libraryapp.models import Library
 from ..connection import Connection
+from .details import get_book
 
 
 def get_libraries():
